@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Notecard from "./Notecard";
 import { useContext } from "react";
 import NoteContext from "../context/notes/NoteContext";
 import Addnote from "./Addnote";
 
 function Notes() {
-  const { notes } = useContext(NoteContext);
+  const { notes, getNotes } = useContext(NoteContext);
+
+  // useEffect(() => {
+  //   // Fetch all notes on component mount
+  //   getNotes();
+  // }, []);
+
+  // // Check if notes is not an array
+  // if (!Array.isArray(notes)) {
+  //   return <div>Loading...</div>; // or show a loading indicator
+  // }
+
   return (
     <>
       <Addnote />

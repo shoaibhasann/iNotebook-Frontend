@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import NoteContext from "../context/notes/NoteContext";
 
 function Notecard({ note }) {
+    
   const { deleteNote } = useContext(NoteContext);
+
+
+
   return (
     <div className="items-center p-2 flex gap-4 flex-col rounded-lg bg-black shadow-lg ">
       <h1 className="text-2xl break-all text-white font-semibold">
